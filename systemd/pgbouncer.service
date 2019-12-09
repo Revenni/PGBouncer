@@ -6,7 +6,7 @@
 # systemctl daemon-reload
 # systemctl start pgbouncer
 
-# Vince / Revenni 12092019
+# Vince Hillier / Revenni (vince at revenni dot com) 12092019
 
 [Unit]
 Description=PGBouncer systemd
