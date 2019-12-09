@@ -1,0 +1,21 @@
+# Systemd Service for pgbouncer
+# Set your configuration file on the ExecStart line and the PID file
+# specified in your configuration file.
+#
+# Place into /etc/systemd/system as pgbouncer.service
+# systemctl daemon-reload
+# systemctl start pgbouncer
+
+# Vince / Revenni 12092019
+
+[Unit]
+Description=PGBouncer systemd
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/pgbouncer -d /etc/pgbouncer/pgbouncer.ini
+PIDFile=/run/pgbouncer/pgbouncer.pid
+
+[Install]
+WantedBy=multi-user.target
